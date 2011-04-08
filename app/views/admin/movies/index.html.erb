@@ -1,0 +1,21 @@
+<h1>Listing admin_movies</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @admin_movies.each do |admin_movie| %>
+  <tr>
+    <td><%= link_to 'Show', admin_movie %></td>
+    <td><%= link_to 'Edit', edit_admin_movie_path(admin_movie) %></td>
+    <td><%= link_to 'Destroy', admin_movie, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Movie', new_admin_movie_path %>
